@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="inner-container">
+    <p class="item">
+      Name: <%= @employee.name %>
+    </p>
+
+    <p class="item">
+      Age: <%= @employee.age %>
+    </p>
+
+    <p class="item">
+      Gender: <%= @employee.gender %>
+    </p>
+
+    <p class="item">
+      Designation: <%= @employee.designation %>
+    </p>
+
+    <%= link_to "Edit", edit_employee_path(@employee), class: "edit button" %>
+    <%= link_to "Back", employees_path, class:"back button" %>
+  </div>
+</div>

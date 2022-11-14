@@ -1,0 +1,30 @@
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Designation</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @employees.each do |employee| %>
+        <tr>
+          <td><%= employee.name %></td>
+          <td><%= employee.age %></td>
+          <td><%= employee.gender %></td>
+          <td><%= employee.designation %></td>
+          <td>
+            <%= link_to 'Show', employee_path(employee), class:"show button" %>
+            <%= link_to 'Edit', edit_employee_path(employee), class:"edit button" %>
+            <%= link_to 'Delete', employee_path(employee), class:"delete button", method: :delete, data: { confirm: 'Are you sure?' } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <div class="create-button-div">
+    <%= link_to 'Create New Employee', new_employee_path, class:"create button" %>
+  </div>

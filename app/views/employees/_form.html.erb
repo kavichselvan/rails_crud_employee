@@ -1,0 +1,27 @@
+<div class="form">
+  <%= form_with(model: employee, local: true) do |f| %>
+    <div class="form-fields">
+      <%= f.label :name %><br/>
+      <%= f.text_field :name, class:"input", required: true %>
+    </div>
+    <br/>
+    <div class="form-fields">
+      <%= f.label :age %><br/>
+      <%= f.number_field :age, class:"input", required: true %>
+    </div>
+    <br/>
+    <div class="form-fields">
+      <%= f.label :gender %><br/>
+      <%= f.text_field :gender, class:"input", required: true %>
+    </div>
+    <br/>
+    <div class="form-fields">
+      <%= f.label :designation %><br/>
+      <%= f.text_field :designation, class:"input", required: true %>
+    </div>
+    <br>
+    <div class="form-fields">
+    <%= f.submit class: "create-update-button"%>
+    </div>
+  <% end %>
+</div>
